@@ -34,7 +34,7 @@ function getUsers(user) {
       content.classList.add("isActive");
       userImage.src = userObj.avatar_url;
       userImageTablet.src = userObj.avatar_url;
-      userName.innerText = userObj.name;
+      userName.innerText = userObj.name ? userObj.name : "No name";
       userlink.innerText = userObj.login;
       userlink.href = userObj.html_url;
       let joinDate = new Date(userObj.created_at);
